@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from api.routes import todo_routes
+from api.routes import todo_router
 
 app = FastAPI()
-app.include_router(todo_routes)
+app.include_router(todo_router)
 
 @app.get("/")
 def index():
-    return {"messsage":"hello world"}
+    return {"message": "hello world"}
